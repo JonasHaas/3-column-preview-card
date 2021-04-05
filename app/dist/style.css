@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html body {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  padding: 100px 15px;
+  background: #f2f2f2;
+  font-family: "Lexend Deca", sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 335px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 1400px) {
+  .row {
+    max-width: 920px;
+  }
+}
+
+.col {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 50px;
+  min-height: 100px;
+  width: 100%;
+}
+.col > div {
+  padding-bottom: 30px;
+}
+.col > div:last-child {
+  padding-bottom: 0;
+}
+.col .link a {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.col .link a:hover {
+  color: rgba(255, 255, 255, 0.75) !important;
+  border: 2px solid #f2f2f2;
+  background-color: transparent !important;
+}
+@media screen and (min-width: 1400px) {
+  .col .link a {
+    margin-top: 50px;
+  }
+}
+.col .headline {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700px;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1400px) {
+  .col {
+    flex: 0 0 33.3333%;
+    max-width: 33.333%;
+  }
+}
+
+.col:nth-child(1) {
+  background-color: #e38826;
+  border-radius: 10px 10px 0 0;
+}
+.col:nth-child(1) .link a {
+  color: #e38826;
+  background-color: #f2f2f2;
+}
+@media screen and (min-width: 1400px) {
+  .col:nth-child(1) {
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+.col:nth-child(2) {
+  background-color: #006970;
+  border-radius: 0;
+}
+.col:nth-child(2) .link a {
+  color: #006970;
+  background-color: #f2f2f2;
+}
+
+.col:nth-child(3) {
+  background-color: #004241;
+  border-radius: 0 0 10px 10px;
+}
+.col:nth-child(3) .link a {
+  color: #004241;
+  background-color: #f2f2f2;
+}
+@media screen and (min-width: 1400px) {
+  .col:nth-child(3) {
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+.footer {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.footer span {
+  color: grey;
+}
+.footer a {
+  transition: all 0.3s ease;
+  color: #000;
+}
+.footer a i {
+  font-size: 30px;
+}
+.footer a:hover {
+  opacity: 0.2;
+}

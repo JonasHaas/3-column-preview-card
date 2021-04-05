@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+$font-family-text: 'Lexend Deca', sans-serif;
+$font-family-headline: 'Big Shoulders Display', cursive;
+
+$orange: hsl(31, 77%, 52%);
+$cyan: hsl(184, 100%, 22%);
+$dark-cyan: hsl(179, 100%, 13%);
+
+$text-primary: hsla(0, 0%, 100%, 0.75);
+$background-primary: hsl(0, 0%, 95%);
+
+$desktop: "min-width: 1400px";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    background: $background-primary;
+    font-family: $font-family-text;
+    color: $text-primary;
+    font-size: 15px;
+}
+
+.container {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and($desktop) {
+        max-width: 920px;
+    }
+}
+
+.col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 50px;
+    min-height: 100px;
+    width: 100%;
+
+    &> div {
+        padding-bottom: 30px;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    .link a {
+        display: inline-block;
+        padding: 10px 22px;
+        border-radius: 25px;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: all .3s ease;
+        &:hover  {
+            color: $text-primary !important;
+            border: 2px solid $background-primary;
+            background-color: transparent !important;
+        }
+        @media screen and($desktop) {
+            margin-top: 50px;
+        }
+    }
+    .headline {
+        font-family: $font-family-headline;
+        font-weight: 700px;
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+    @media screen and($desktop) {
+        flex: 0 0 33.3333%;
+        max-width: 33.333%;
+    }
+}
+
+
+.col:nth-child(1) {
+    background-color: $orange;
+    border-radius: 10px 10px 0 0;
+    .link {
+        a {
+            color: $orange;
+            background-color: $background-primary;
+        }
+    }
+    @media screen and($desktop) {
+        border-radius: 10px 0 0 10px;
+    }
+}
+.col:nth-child(2) {
+    background-color: $cyan;
+    border-radius: 0;
+    .link {
+        a {
+            color: $cyan;
+            background-color: $background-primary;
+        }
+    }
+}
+.col:nth-child(3) {
+    background-color: $dark-cyan;
+    border-radius: 0 0 10px 10px;
+    .link {
+        a {
+            color: $dark-cyan;
+            background-color: $background-primary;
+        }
+    }
+    @media screen and($desktop) {
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+.footer {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    span {
+        color: grey;
+    }
+    a {
+        transition: all .3s ease;
+        color: $black;
+        i {
+            font-size: 30px;
+        }
+        &:hover {
+            opacity: .2;
+        }
+    }
+}
